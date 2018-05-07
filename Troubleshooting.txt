@@ -1,0 +1,75 @@
+Nimsoft connection issues:
+
+1. need to locate controller.log file from the server and need to check the logs.
+
+
+[root@res-inf-trl02a ~]# locate controller.log
+/opt/nimsoft/robot/_controller.log
+/opt/nimsoft/robot/controller.log
+
+[root@res-inf-trl02a ~]# cat /opt/nimsoft/robot/controller.log
+
+2. Need to check the hub derails of a robot machine.
+
+[root@res-inf-trl02a ~]# locate robot.cfg
+/opt/nimsoft/robot/robot.cfg
+[root@res-inf-trl02a ~]# cat /opt/nimsoft/robot/robot.cfg
+<controller>
+   domain = TCH
+   robotname = res-inf-trl02a
+   robotip = 20.176.236.69
+   robotip_alias =
+   first_probe_port = 48005
+   autoremove = no
+   robot_mode = normal
+   access_0 = 0
+   access_1 = 1
+   access_2 = 2
+   access_3 = 3
+   access_4 = 4
+   ip_version = ipv4
+   local_ip_validation = yes
+   strict_ip_binding = no
+   secondary_domain =
+   secondary_hub =
+   secondary_hubrobotname =
+   secondary_hubip =
+   secondary_hubport =
+   secondary_hub_dns_name =
+   secondary_robotip_alias = same
+   loglevel = 0
+   logsize = 1024
+   suspend_on_loopback_only = yes
+   config_locking = no
+   hub_update_interval = 900
+   temporary_hub_broadcast = yes
+   system_uptime_qos = no
+   set_qos_source = no
+   unmanaged_security = domain_locked
+   alarm_level_comfail_restart =
+   alarm_level_dispatch_error = major
+   alarm_level_max_restarts = major
+   alarm_level_start_error = major
+   alarm_level_timed_not_finished = warning
+   alarm_level_unregister = major
+   alarm_level_request_error = major
+   alarm_level_timed_error_return = warning
+   alarm_level_postinstall = no alarm
+   hub = res-inf-trl02a
+   hubrobotname = res-inf-trl02a
+   hubip = 20.176.236.69
+   hubport = 48002
+   audit = 6
+   <environment>
+      LD_LIBRARY_PATH = .:.:
+   </environment>
+</controller>
+
+3 Need to check weather hub ip is pinging or not then we need to proceed further.
+
+
+Performance issue due to swap utilisation even though there is memory avaialable:
+================================================================================
+
+
+
